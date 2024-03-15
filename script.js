@@ -6,7 +6,7 @@ const expenseList =
 	document.getElementById("expense-list"); 
 const totalAmountElement = 
 	document.getElementById("total-amount"); 
-
+	
 // Initialize expenses array from localStorage 
 let expenses = 
 	JSON.parse(localStorage.getItem("expenses")) || []; 
@@ -27,6 +27,7 @@ function renderExpenses() {
 		expenseRow.innerHTML = ` 
 	<td>${expense.name}</td> 
 	<td>$${expense.amount}</td> 
+	<td>${expense.category}</td> <!-- Add Category Column -->
 	<td class="delete-btn" data-id="${i}">Delete</td> 
 	`; 
 		expenseList.appendChild(expenseRow); 
@@ -53,27 +54,35 @@ function addExpense(event) {
 		document.getElementById("expense-name"); 
 	const expenseAmountInput = 
 		document.getElementById("expense-amount"); 
+		const expenseCategoryInput =
+		 document.getElementById("expense-category"); 
 	const expenseName = 
-		expenseNameInput.value; 
+		expenseNameInput.value   ; 
 	const expenseAmount = 
 		parseFloat(expenseAmountInput.value); 
+		const expenseCategory = expenseCategoryInput.value; 
 
 	// Clear form inputs 
 	expenseNameInput.value = ""; 
 	expenseAmountInput.value = ""; 
+	expenseCategoryInput.value = ""; 
 
 	// Validate inputs 
-	if (expenseName === "" || isNaN(expenseAmount)) { 
-		alert("Please enter valid expense details."); 
-		return; 
-	} 
+	if (expenseName === "" || isNaN(expenseAmount) || expenseCategory === "") { 
+        alert("Please enter valid expense details."); 
+        return; 
+    } 
+
 
 	// Create new expense object 
 	const expense = { 
 		name: expenseName, 
 		amount: expenseAmount, 
+		category: expenseCategory
 	}; 
 
+
+	
 	// Add expense to expenses array 
 	expenses.push(expense); 
 
