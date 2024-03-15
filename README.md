@@ -1,3 +1,4 @@
 ﻿# Expense-tracker-app
-![Screenshot (238)](https://github.com/Anjali-game/Expense-tracker-app/assets/136882525/11ef522c-46f0-4ae3-86f6-6e501acfbb58)
-![Screenshot (237)](https://github.com/Anjali-game/Expense-tracker-app/assets/136882525/7c6ad1de-c96f-4c2c-a8ed-28688a172085)
+![Screenshot (240)](https://github.com/Anjali-game/Expense-tracker-app/assets/136882525/0788b09f-a5cb-432c-b00f-cef531b84819)
+![Screenshot (241)](https://github.com/Anjali-game/Expense-tracker-app/assets/136882525/ab05a5f1-9d59-4988-936a-55a0335f77ef)
+
